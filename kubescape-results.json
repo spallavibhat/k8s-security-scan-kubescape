@@ -1,0 +1,35 @@
+{
+  "formatVersion": "v2",
+  "metadata": {
+    "clusterName": "minikube",
+    "timestamp": "2025-06-15T08:00:00Z",
+    "kubescapeVersion": "3.0.0"
+  },
+  "summary": {
+    "passedControls": 12,
+    "failedControls": 3,
+    "excludedControls": 0,
+    "totalControls": 15
+  },
+  "resources": [
+    {
+      "resourceID": "Pod/default/nginx",
+      "resourceKind": "Pod",
+      "namespace": "default",
+      "controls": [
+        {
+          "controlID": "C-001",
+          "name": "Host Network",
+          "status": "failed",
+          "description": "Pods should not use hostNetwork."
+        },
+        {
+          "controlID": "C-002",
+          "name": "Privilege Escalation",
+          "status": "passed",
+          "description": "Containers should not allow privilege escalation."
+        }
+      ]
+    }
+  ]
+}
